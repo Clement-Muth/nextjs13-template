@@ -7,11 +7,8 @@ const IndexPage = () => {
   return (
     <>
       <NextSeo />
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-        height="calc(100vh - 64px)"
-      >
+      <Flex justifyContent="center" alignItems="center" height="calc(100vh - 64px)">
+        <Text fontSize={6}>Hello :)</Text>
         <Text fontSize={6}>Hello :)</Text>
       </Flex>
     </>

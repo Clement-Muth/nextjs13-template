@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "app/",
+    "app",
     "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "compile": "yarn workspace @nextjs13-template/app tsc -p .",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "eslint './**/*.{ts,tsx}'",
     "start": "yarn workspace @nextjs13-template/app start",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^12.2.0",
@@ -36,9 +37,28 @@
     "@types/react-dom": "^18.0.6",
     "@types/rebass": "^4.0.10",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "node-typescript-compiler": "^3.0.0",
     "nprogress": "^0.2.0",
     "typescript": "^4.8.4"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.17",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git-cz --hook"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix"
+    ]
+  }
 }
