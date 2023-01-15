@@ -1,9 +1,9 @@
 import { Box } from "rebass";
 import type { FC } from "react";
 import { NextPages } from "../../../interfaces/pages";
-import { Navbar } from "../Navbar";
+import { Navbar } from "..";
 
-export const Layout: FC<NextPages> = ({ ...props }) => {
+const Layout: FC<NextPages> = ({ ...props }) => {
   return (
     <>
       <Navbar />
@@ -13,3 +13,5 @@ export const Layout: FC<NextPages> = ({ ...props }) => {
     </>
   );
 };
+
+export default Layout;

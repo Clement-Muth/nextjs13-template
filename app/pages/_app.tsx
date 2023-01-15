@@ -7,11 +7,11 @@ import { useNProgress } from "library/hooks";
 import { NextPages } from "library/interfaces/pages";
 import config from "../config/seo_meta.json";
 import type { AppProps } from "next/app";
-import { Kanit } from "@next/font/google";
+import { Roboto } from "@next/font/google";
 
-const inter = Kanit({
+const inter = Roboto({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 const Noop: FC<{ children: ReactNode }> = (props) => <>{props.children}</>;
