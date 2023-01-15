@@ -1,6 +1,6 @@
 import "library/assets/css/main.css";
 import { FC, ReactNode, useEffect } from "react";
-import { Head } from "library/components/common/Head";
+import { Head } from "library/components/common";
 import { theme } from "library/components/common/Theme/theming";
 import { ThemeProvider } from "emotion-theming";
 import { useNProgress } from "library/hooks";
@@ -10,7 +10,7 @@ import type { AppProps } from "next/app";
 import { Roboto } from "@next/font/google";
 
 const inter = Roboto({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"]
 });
 

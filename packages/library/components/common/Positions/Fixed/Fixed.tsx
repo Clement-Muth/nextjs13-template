@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 import { PositionProps } from "styled-system";
-import Position from "../Position";
+import { Position } from "..";
 
 export type FixedProps = PositionProps;
 

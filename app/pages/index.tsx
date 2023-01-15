@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import { Layout } from "library/components/common/Layout";
+import { Layout } from "library/components/common";
 import { Text } from "library/components/ui";
 import { Flex } from "rebass";
 

@@ -1,4 +1,4 @@
-import { NextSeo } from "library/components/common/NextSeo";
+import { NextSeo } from "library/components/common";
 import { Flex, Text } from "rebass";
 
 const Page404 = () => (

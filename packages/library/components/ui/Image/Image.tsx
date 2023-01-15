@@ -2,7 +2,7 @@ import ImageNext, { type ImageProps } from "next/legacy/image";
 import { PositionProps } from "styled-system";
 
 import { FC, useEffect, useRef } from "react";
-import { Relative } from "../../common/Positions/Relative/Relative";
+import { Relative } from "../../common";
 import { FlexProps } from "rebass";
 
 const Image: FC<
